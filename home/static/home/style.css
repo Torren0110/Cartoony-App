@@ -1,0 +1,156 @@
+:root {
+    --color-blue-dark:  #2779a7;
+    --color-green-light: #49c5b6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: var(--color-green-light);
+}
+
+section {
+    height: 100vh;
+}
+
+.even {
+    background: var(--color-blue-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.even div {
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;;
+}
+
+#car {
+    position: absolute;
+    left : 0;
+    top : 0;
+    z-index: 100;
+    width: 0;
+}
+
+nav {
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+    padding: 1rem;
+    color: white;
+    background-color: var(--color-blue-dark);
+}
+
+.top {
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cnt {
+    background: var(--color-green-light);
+    border: dashed var(--color-blue-dark);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+    color: var(--pColor);
+    padding: 20px;
+}
+
+.input, .output {
+    width: 30vw;
+    height: 30vw;
+    color: var(--color-blue-dark);
+}
+
+.btns{
+    display: grid;
+}
+
+.cnt>img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.solid-border {
+    border-style:solid;
+}
+
+.input {
+    cursor: pointer;
+}
+
+.cnt input {
+    display: none;
+}
+
+button {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1rem;
+
+    border: solid 4px var(--color-green-light);
+    background: var(--color-blue-dark);
+    color : white;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: inherit;
+    color: var(--color-blue-dark);
+    border-color: var(--color-blue-dark);
+}
+
+.hide {
+    display: none;
+}
+
+.side {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+#left {
+    background: #17f;
+}
+
+#right {
+    background: #a97;
+    z-index: 2;
+}
+
+.side img {
+    height: 100%;
+}
+
+@media screen and (max-width: 1000px){
+    .top{
+        flex-direction: column;
+    }
+
+    .input, .output {
+        width: 50vw;
+        height: 50vw;
+    }
+
+    section{
+        height: initial;
+    }
+}

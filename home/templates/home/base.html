@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'home/style.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Cartoonify</title>
+</head>
+<body>
+    <section>
+        <nav>
+            Cartoonify
+        </nav>
+        <div class="top">
+            <div class="cnt input" id="inputArea">
+                <span id="input-text">Drop Image or Click to Upload</span>
+                <input class = 'img' id="imgFile" type="file" src="" alt="Upload An image">
+            </div>
+            <div class="btns">
+                <button id='submit'>Cartoonify</button>
+                <button id="reset">Reset</button>
+            </div>
+            <div id="animation" class="hide">
+                this is an animation
+            </div>
+            <div class="cnt output">
+                <img id='outputImg' src="" alt="" />
+            </div>
+        </div>
+    </section>
+    <section class = "even" id="slide-cnt">
+        <div class = "side" id="left">
+            <img id= "bottom-img">
+        </div>
+        <div class = "side" id="right">
+            <img id="top-img">
+        </div>
+    </section>
+<script src="{% static 'home/script.js' %}"></script>
+</body>
+</html>
